@@ -50,7 +50,7 @@ START_TEST(test_2d_eq)
     b.x = 7.77;
     b.y = 8.88;
     ck_assert(!coord_2d_eq(&a, &b));
-
+    
 }
 END_TEST
 
@@ -146,6 +146,17 @@ START_TEST(test_2d_midpoint)
 END_TEST
 
 /* coord_2d Test Suite */
+START_TEST(coord_2d_area_triangle)
+{
+a.x=0;
+a.y=0;
+b.x=0;
+b.y=0;
+c.x=0;
+c.y=0;
+ck_assert(coord_2d_area_triangle(&a,&b,&c)==0);
+}
+END_TEST
 Suite* coord_2d_suite(void)
 {
 
